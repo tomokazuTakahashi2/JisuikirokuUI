@@ -16,16 +16,18 @@ struct ContentView: View {
     var body: some View {
         NavigationSplitView {
             ZStack(alignment: .bottomTrailing) {
+                // リスト
                 List {
                     ForEach(items) { item in
-                        NavigationLink {
-                            Text("Item at \(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))")
-                        } label: {
-                            Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
-                        }
+//                        NavigationLink {
+                            HomeCell(imageName: item.itemImage,
+                                     date: " \(formatDate(item.timestamp))",
+                                     title: item.title)
+//                        }
                     }
                     .onDelete(perform: deleteItems)
                 }
+                // 新規投稿ボタン
                 Button(action: {
                     // ボタンのアクション
                     isDetailViewPresented = true
@@ -40,30 +42,12 @@ struct ContentView: View {
                 .padding(.trailing, 30) // 右端から30ポイントの位置に配置
                 .padding(.bottom, 30)
                 NavigationLink(destination: DetailView(), isActive: $isDetailViewPresented) {
-                    EmptyView() // ナビゲーションリンクを表示しないための空のビュー
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    // ナビゲーションリンクを表示しないための空のビュー
+                    EmptyView()
                 }
             }
         } detail: {
             Text("Select an item")
-        }
-    }
-
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(itemImage: "img_noimage",
-                               timestamp: Date(),
-                               title: "タイトル")
-            modelContext.insert(newItem)
         }
     }
 
@@ -73,6 +57,12 @@ struct ContentView: View {
                 modelContext.delete(items[index])
             }
         }
+    }
+    
+    private func formatDate(_ date: Date) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy" // フォーマットに合わせて設定
+        return dateFormatter.string(from: date)
     }
 }
 

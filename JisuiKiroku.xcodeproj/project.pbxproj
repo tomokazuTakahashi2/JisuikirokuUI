@@ -17,6 +17,8 @@
 		8B7EF8C42BD1EB06000413F5 /* JisuiKirokuUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7EF8C32BD1EB06000413F5 /* JisuiKirokuUITestsLaunchTests.swift */; };
 		8B7EF8D72BD54381000413F5 /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7EF8D62BD54381000413F5 /* HomeCell.swift */; };
 		8B7EF8D92BD5575C000413F5 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7EF8D82BD5575C000413F5 /* DetailView.swift */; };
+		8B7EF8DB2BD6B106000413F5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7EF8DA2BD6B106000413F5 /* ImagePicker.swift */; };
+		8B7EF8DD2BD6B268000413F5 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7EF8DC2BD6B268000413F5 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		8B7EF8C32BD1EB06000413F5 /* JisuiKirokuUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JisuiKirokuUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		8B7EF8D62BD54381000413F5 /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
 		8B7EF8D82BD5575C000413F5 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
+		8B7EF8DA2BD6B106000413F5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		8B7EF8DC2BD6B268000413F5 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +108,9 @@
 				8B7EF8A62BD1EB04000413F5 /* ContentView.swift */,
 				8B7EF8D82BD5575C000413F5 /* DetailView.swift */,
 				8B7EF8D62BD54381000413F5 /* HomeCell.swift */,
+				8B7EF8DA2BD6B106000413F5 /* ImagePicker.swift */,
 				8B7EF8A82BD1EB04000413F5 /* Item.swift */,
+				8B7EF8DC2BD6B268000413F5 /* UIImageExtension.swift */,
 				8B7EF8AA2BD1EB06000413F5 /* Assets.xcassets */,
 				8B7EF8AC2BD1EB06000413F5 /* Preview Content */,
 			);
@@ -268,7 +274,9 @@
 			files = (
 				8B7EF8A72BD1EB04000413F5 /* ContentView.swift in Sources */,
 				8B7EF8A92BD1EB04000413F5 /* Item.swift in Sources */,
+				8B7EF8DD2BD6B268000413F5 /* UIImageExtension.swift in Sources */,
 				8B7EF8D72BD54381000413F5 /* HomeCell.swift in Sources */,
+				8B7EF8DB2BD6B106000413F5 /* ImagePicker.swift in Sources */,
 				8B7EF8D92BD5575C000413F5 /* DetailView.swift in Sources */,
 				8B7EF8A52BD1EB04000413F5 /* JisuiKirokuApp.swift in Sources */,
 			);
